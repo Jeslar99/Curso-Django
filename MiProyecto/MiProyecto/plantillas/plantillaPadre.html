@@ -7,10 +7,13 @@
     </head>
     <body>
         {% include "plantillaBarraNavegacion.html" %}
-        <h1">Jeslar99</h1>
+        <h1>Jeslar99</h1>
+        <img src = '{% static "imagenes/f1.png" %}'>
+        <br/>
         {% block content %}
 
         {% endblock %}
         <p>Este es el pie de pagina</p>
+        <script type='text/javascript' src = '{% static "js/plantillaPadre.js" %}'></script>
     </body>
 </html>
