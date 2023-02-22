@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Plantilla que recibe parámetros
+        </title>
+        <style type="text/css">
+            li{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Nombre: {{Nombre}}</h1>
+        <h2> Fecha: {{fechaActual.day}} / {{fechaActual.month}} / {{fechaActual.year}}</h2>
+        {# Este es un comentario que me será de utilidad. #}
+        <h3>No. de lenguajes: {{lenguajes|length}}</h3>
+        <ul> 
+            {% for leng in lenguajes %}
+                {% if leng == 'Python' %}
+                    <li style="color:yellow;">{{leng}}</li>
+                {% else %}
+                    <li>{{leng|first}} : {{leng|upper}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        {% comment %}
+        Este es un comentario
+        de mas de 1 linea.
+        {% endcomment %}
+    </body>
+</html>
